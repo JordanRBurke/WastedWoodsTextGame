@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".ChapterOnePageOneActivity">
+
+    <TextView
+        android:id="@+id/story_page_view"
+        android:layout_width="359dp"
+        android:layout_height="458dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="You were running in the forest from something……. You have no idea what it was, heavy and loud foot steps indicated that it was something big but you didn’t want to look back to find out. After running for nearly 2 minutes you neared a intersection that split into 2 paths. The left path was a dirt pathway that had leaves scattered across it, this lead too a area in the woods with dead trees and black scorch marks across the terrain, must have been from a lightning strike you think to yourself because nothing else could have done that in the woods unless someone made a campfire and used a bit too many sticks. The 2nd path lead too a low maintenance cabin that looked like it had not been used in ages. The path itself was a lot like the first one but littered with trash and junk that was probably from the house but the wind swept it down the path."
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/first_path_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="6dp"
+        android:text="First Path"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/second_path_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="6dp"
+        android:text="Second Path"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/inventory_button"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:drawable/ic_dialog_dialer"
+        app:layout_constraintEnd_toStartOf="@+id/second_path_button"
+        app:layout_constraintStart_toEndOf="@+id/first_path_button"
+        tools:layout_editor_absoluteY="484dp" />
+</android.support.constraint.ConstraintLayout>

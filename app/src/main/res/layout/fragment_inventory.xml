@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_constraint_view"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#612e2e">
+
+    <Button
+        android:id="@+id/inventory_slot_right"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintRight_toRightOf="@+id/fragment_constraint_view"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/inventory_slot_left"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintLeft_toLeftOf="@+id/fragment_constraint_view"
+        android:layout_marginLeft="40dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

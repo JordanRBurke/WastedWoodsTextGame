@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chapter_constraint_view"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,7 +30,8 @@
         android:layout_marginStart="6dp"
         android:text="First Path"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <Button
         android:id="@+id/second_path_button"
@@ -39,16 +41,28 @@
         android:layout_marginEnd="6dp"
         android:text="Second Path"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <Button
         android:id="@+id/inventory_button"
         android:layout_width="56dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:background="@android:drawable/ic_dialog_dialer"
-        app:layout_constraintEnd_toStartOf="@+id/second_path_button"
-        app:layout_constraintStart_toEndOf="@+id/first_path_button"
-        tools:layout_editor_absoluteY="484dp" />
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="491dp"
+        app:layout_constraintRight_toRightOf="@id/first_path_button"
+        app:layout_constraintLeft_toLeftOf="@id/second_path_button"
+        app:layout_constraintBottom_toBottomOf="@id/chapter_constraint_view"/>
+
+
+    <FrameLayout
+        android:id="@+id/chapter_frame_layout"
+        android:layout_width="360dp"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>

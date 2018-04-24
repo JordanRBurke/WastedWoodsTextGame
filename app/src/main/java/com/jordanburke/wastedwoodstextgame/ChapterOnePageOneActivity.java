@@ -82,16 +82,18 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
             secondPath.setText("Climb");
         } else if (positionButton == 2) {
             positionButton++;
+            // Extends out of First Path
+            // Extends out of
             storyPage.setText("You decide to get the figure before it gets you. You pick up a " +
                     "big branch from off the ground and approach the figure. Upon clo" +
-                    "ser examination you see extra limb and other extra body parts that" +
+                    "ser examination you see extra limbs and other extra body parts that" +
                     " rule out the possibility of it being human, this shocks you and yo" +
                     "u hesitate to go forward, but you gather your senses and begin to engage" +
                     " the creature. The creature gets knocked back by your initial blow and" +
-                    " fallback. Would you like to run while you have a chance or keep fighting it?");
+                    " falls back. Would you like to run while you have a chance or keep fighting it?");
             firstPath.setText("Run");
             secondPath.setText("Fight");
-            Toast.makeText(this, "You have equipped branch!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You have equipped branch!", Toast.LENGTH_LONG).show();
 
         } else if (positionButton == 3) {
 

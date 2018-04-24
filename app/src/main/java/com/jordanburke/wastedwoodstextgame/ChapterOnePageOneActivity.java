@@ -24,6 +24,8 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
     protected Button inventoryButton;
     private InventoryFragment inventoryFragment;
     private int positionButton = 0;
+    private double randomNumber;
+    private boolean swordPickedUp = false;
 
 
 
@@ -38,6 +40,7 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
     protected void inventoryButtonClicked() {
         inventoryFragment = InventoryFragment.newInstance();
 
+
         getSupportFragmentManager().beginTransaction().replace(R.id.chapter_frame_layout, inventoryFragment).commit();
 
     }
@@ -46,6 +49,7 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
 
     @OnClick(R.id.first_path_button)
     protected void firstPathButtonClicked() {
+        randomNumber = Math.random()*14+1;
 
         if (positionButton == 1) {
 
@@ -74,6 +78,17 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
             secondPath.setText("Fight");
 
         } else if (positionButton == 3) {
+
+        } else if (randomNumber == 2 || randomNumber == 5 ) {
+            storyPage.setText("The creature catches up to you *You are engaged in battle* ");
+        } else if (randomNumber == 3 || randomNumber == 7 & swordPickedUp == false) {
+            storyPage.setText("You approach a cave to the side of the path and notice something" +
+                    " glowing inside, realizing you have no idea what it could be you prepare for " +
+                    "anything, when you get are about 2 feet away from the object you notice it's a " +
+                    "sword glowing with a radiant light");
+            firstPath.setText("Take");
+            secondPath.setText("Leave");
+            swordPickedUp = true;
 
         }
 
@@ -105,6 +120,8 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
                     " you are dodging trees and tree trunks often. You trip on a branch " +
                     "about 2 minutes down the trail. Do you try and hide in the brush or keep" +
                     " running?");
+            firstPath.setText("Hide");
+            secondPath.setText("Run");
 
         } else if (positionButton == 3) {
 

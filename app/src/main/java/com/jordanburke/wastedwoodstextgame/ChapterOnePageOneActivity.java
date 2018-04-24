@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -26,6 +27,7 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
     private int positionButton = 0;
     private double randomNumber;
     private boolean swordPickedUp = false;
+    private boolean fragmentActive = false;
 
 
 
@@ -36,8 +38,20 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        if (fragmentActive) {
+            getSupportFragmentManager().beginTransaction().remove(inventoryFragment);
+        } else {
+            super.onBackPressed();
+        }
+
+    }
+
     @OnClick(R.id.inventory_button)
     protected void inventoryButtonClicked() {
+        fragmentActive = true;
         inventoryFragment = InventoryFragment.newInstance();
 
 
@@ -51,23 +65,24 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
     protected void firstPathButtonClicked() {
         randomNumber = Math.random()*14+1;
 
+        positionButton++;
         if (positionButton == 1) {
 
-            positionButton++;
+
             storyPage.setText("You run down the path deciding that it would be the most " +
                     "reasonable path. The branches make loud crunches as you run overtop " +
                     "of them, while avoiding any large tree limbs in the way. The path en" +
                     "ds abruptly at the next turn where a large tree has fallen, blocking the path. \n" +
                     "Panic begins too consume you as you struggle to find a new exit route. There" +
-                    " is no way to go get past the blocked path and you are cornered by what was " +
+                    " is no way to get around the blocked path and you are cornered by what was " +
                     "chasing you. You turn around to a huge looming figure in the distance, his face " +
                     "covered by darkness. There are only two options that you can think of, attack " +
-                    "before he gets closer or attempt to climb the tree.");
+                    "before he gets closer or attempt to climb over the tree.");
             firstPath.setText("Attack");
             secondPath.setText("Climb");
         } else if (positionButton == 2) {
             positionButton++;
-            storyPage.setText("You decide to get it before it gets you. You pick up a " +
+            storyPage.setText("You decide to get the figure before it gets you. You pick up a " +
                     "big branch from off the ground and approach the figure. Upon clo" +
                     "ser examination you see extra limb and other extra body parts that" +
                     " rule out the possibility of it being human, this shocks you and yo" +
@@ -76,6 +91,7 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
                     " fallback. Would you like to run while you have a chance or keep fighting it?");
             firstPath.setText("Run");
             secondPath.setText("Fight");
+            Toast.makeText(this, "You have equipped branch!", Toast.LENGTH_SHORT).show();
 
         } else if (positionButton == 3) {
 
@@ -97,9 +113,11 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
 
     @OnClick(R.id.second_path_button)
     protected void secondPathClicked() {
+
         positionButton++;
         if (positionButton == 1) {
 
+            positionButton++;
             storyPage.setText("You run down the path deciding that the cabin would be the best " +
                     "place too avoid the mysterious figure behind him. You run down the path " +
                     "panting praying that the cabin is the safe haven you want it too be. The " +
@@ -112,6 +130,7 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
             secondPath.setText("Pass Cabin");
 
         } else if (positionButton == 2) {
+            positionButton++;
             storyPage.setText("You attempt to climb over the tree branch, this takes some" +
                     " time but you barely manage to escape the arm reach of the entity, when" +
                     " looking back to see if he was still following you see multiple limbs" +
@@ -129,8 +148,6 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
 }

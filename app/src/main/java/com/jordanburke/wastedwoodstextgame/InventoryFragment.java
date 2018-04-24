@@ -35,6 +35,7 @@ public class InventoryFragment extends Fragment {
         return fragment;
     }
 
+
     @Override
     public void onDetach() {
         super.onDetach();

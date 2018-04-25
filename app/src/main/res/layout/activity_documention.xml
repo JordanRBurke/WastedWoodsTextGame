@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/documentation_constraint_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DocumentationActivity">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/entity_image_view"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintLeft_toLeftOf="@id/documentation_constraint_view"
+        app:layout_constraintTop_toTopOf="@+id/documentation_constraint_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/subject_description_view"
+        android:layout_width="320dp"
+        android:layout_height="410dp"
+        app:layout_constraintBottom_toBottomOf="@id/documentation_constraint_view"
+        app:layout_constraintTop_toBottomOf="@id/entity_image_view"
+        app:layout_constraintRight_toRightOf="@id/documentation_constraint_view"
+        app:layout_constraintLeft_toLeftOf="@id/documentation_constraint_view"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="monospace"
+        android:text="Subject - 103869: Subject 103869 is a being of unknown origin, scientists theorize that he was a result of a nuclear accident but this has yet been proven. Subject 103869 has a adverse effect on the mind and causes the victim to experience unpleasent dreams when Subject 103869 is within30 feet of the victim. It is unknown of how he does it and is under currentinvestigation. Please be advised that under a state of emergency militarypersonel are not too engage Subject 103869 because of the mind effects  itmay have on personel. Subject 103869 has no known weakness and is immune tooany kind of fire by some how warping said persons prospective. Subject 103869 is assumed to be humanoid but the blood of Subject 103869 is black and when in contact with air creates a sonic screech that is loud enough to knock out anyone. UNDER NO CONDITION IS TOO BE FIRED AT"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        app:layout_constraintRight_toRightOf="@id/documentation_constraint_view"
+        app:layout_constraintBottom_toTopOf="@id/subject_description_view"
+        app:layout_constraintTop_toTopOf="@id/documentation_constraint_view"
+        android:layout_marginRight="20dp"
+        android:text="SUBJECT - 103869"
+        android:textSize="20sp"
+        android:fontFamily="monospace"/>
+
+</android.support.constraint.ConstraintLayout>

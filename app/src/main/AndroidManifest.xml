@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChapterSelectionActivity" />
-        <activity android:name=".ChapterOnePageOneActivity"></activity>
+        <activity android:name=".ChapterOnePageOneActivity" />
+        <activity android:name=".DocumentationActivity"></activity>
     </application>
 
 </manifest>

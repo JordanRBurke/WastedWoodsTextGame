@@ -68,7 +68,7 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
         positionButton++;
         if (positionButton == 1) {
 
-
+            // Extension out of first path
             storyPage.setText("You run down the path deciding that it would be the most " +
                     "reasonable path. The branches make loud crunches as you run overtop " +
                     "of them, while avoiding any large tree limbs in the way. The path en" +
@@ -83,7 +83,7 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
         } else if (positionButton == 2) {
             positionButton++;
             // Extends out of First Path
-            // Extends out of
+            // Extends out of Attack Path
             storyPage.setText("You decide to get the figure before it gets you. You pick up a " +
                     "big branch from off the ground and approach the figure. Upon clo" +
                     "ser examination you see extra limbs and other extra body parts that" +
@@ -95,10 +95,14 @@ public class ChapterOnePageOneActivity extends AppCompatActivity {
             secondPath.setText("Fight");
             Toast.makeText(this, "You have equipped branch!", Toast.LENGTH_LONG).show();
 
+
         } else if (positionButton == 3) {
+            
 
         } else if (randomNumber == 2 || randomNumber == 5 ) {
-            storyPage.setText("The creature catches up to you *You are engaged in battle* ");
+            storyPage.setText("The creature catches up to you *You are engaged in battle* \n What would you like too do? ");
+            firstPath.setText("Attack");
+            secondPath.setText("Evade");
         } else if (randomNumber == 3 || randomNumber == 7 & swordPickedUp == false) {
             storyPage.setText("You approach a cave to the side of the path and notice something" +
                     " glowing inside, realizing you have no idea what it could be you prepare for " +
